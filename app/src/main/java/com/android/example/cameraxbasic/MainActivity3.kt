@@ -82,7 +82,7 @@ class MainActivity3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main3)
 
-        textureView = findViewById(R.id.texture_view)
+          textureView = findViewById(R.id.texture_view)
         cameraManager = getSystemService(Context.CAMERA_SERVICE) as CameraManager
 
         cameraThread = HandlerThread("CameraThread").apply { start() }
