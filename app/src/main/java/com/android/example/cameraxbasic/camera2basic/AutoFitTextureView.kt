@@ -18,8 +18,6 @@ package com.android.example.cameraxbasic.camera2basic
 
 import android.content.Context
 import android.util.AttributeSet
-import android.util.Log
-import android.view.MotionEvent
 import android.view.TextureView
 import android.view.View
 
@@ -66,10 +64,6 @@ class AutoFitTextureView @JvmOverloads constructor(
                 setMeasuredDimension(height * ratioWidth / ratioHeight, height)
             }
         }
-    }
-
-    override fun onTouchEvent(event: MotionEvent?): Boolean {
-        return super.onTouchEvent(event)
     }
 
 }

@@ -26,7 +26,6 @@ import android.util.Log
 import android.util.Size
 import android.util.SparseIntArray
 import android.view.MotionEvent
-import android.view.ScaleGestureDetector
 import android.view.Surface
 import android.view.TextureView
 import android.widget.Button
@@ -34,7 +33,6 @@ import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import java.io.File
 import java.text.SimpleDateFormat
@@ -120,7 +118,7 @@ class MainActivity3 : AppCompatActivity() {
             return@setOnTouchListener true
         }*/
 
-        /*textureView.setOnTouchListener { _, event ->
+        textureView.setOnTouchListener { _, event ->
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
                     initialTouchX = event.x
@@ -162,7 +160,7 @@ class MainActivity3 : AppCompatActivity() {
                     updateCameraZoom(zoomRect)
                     updateCameraFocus(initialTouchX / textureView.width, initialTouchY / textureView.height)
 
-                    *//*val deltaX = event.x - initialTouchX
+                    /*val deltaX = event.x - initialTouchX
                     val deltaY = event.y - initialTouchY
 
                     val characteristics = cameraManager.getCameraCharacteristics(cameraId)
@@ -213,11 +211,11 @@ class MainActivity3 : AppCompatActivity() {
 
                     // Update camera zoom and focus areas
                     updateCameraZoom(zoomRect)
-                    updateCameraFocus(newFocusX, newFocusY)*//*
+                    updateCameraFocus(newFocusX, newFocusY)*/
                 }
             }
             true
-        }*/
+        }
 
         startBackgroundThread()
     }
